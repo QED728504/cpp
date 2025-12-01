@@ -37,23 +37,25 @@ int display(){
    return V0*t+0.5*a*t*t;
 }
 };
-
+int caculater(S &s){
+    s.display();
+}
 int main(){
     SCL object1;
     object1.SetValueV0(5);
     object1.SetValuea(0);
     object1.SetValuet(10);
-    cout<<"SCL的位移为"<<object1.display()<<endl;
+    cout<<"SCL的位移为"<<caculater(object1)<<endl;
     SAL object2;
     object2.SetValueV0(10);
     object2.SetValuea(5);
    object2.SetValuet(20);
-    cout<<"SAL的位移为"<<object2.display()<<endl;
+    cout<<"SAL的位移为"<<caculater(object2)<<endl;
     SVL object3;
     object3.SetValueV0(200);
     object3.SetValuea(-10);
     object3.SetValuet(6);
-    cout<<"SVL的位移为"<<object3.display()<<endl;
+    cout<<"SVL的位移为"<<caculater(object3)<<endl;
 
 }
 
